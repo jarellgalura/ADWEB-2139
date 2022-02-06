@@ -1,0 +1,31 @@
+<hr>
+<h1>This is the Gradebook page</h1>
+<hr>
+<img src={{imageUrl}} class="img-fluid" alt="...">
+<br>
+<br>
+<br>
+<div class="input-group">
+    <span class="input-group-text">First and last name</span>
+    <input type="text" [(ngModel)]="studName" aria-label="First name" class="form-control">
+    <input type="text" [(ngModel)]="lastname" aria-label="Last name" class="form-control">
+  </div>
+  <br>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-default">Enter your prelim grade</span>
+  <input type="text" class="form-control" [(ngModel)]="prelim" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Prelim">
+</div>
+<div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Enter your midterm grade</span>
+    <input type="text" class="form-control" [(ngModel)]="midterm" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Midterm">
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Enter your final grade</span>
+    <input type="text" class="form-control" [(ngModel)]="final" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default "placeholder="Final">
+  </div>
+<hr>
+<p>Hello, {{studName}} {{lastname}}! </p>
+<p>Prelim grade, {{prelim}}! </p>
+<p>Midterm grade, {{midterm}}! </p>
+<p>Final grade, {{final}}! </p>
+<p>Average: {{(prelim+midterm+final)/3}}</p>
